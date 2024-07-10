@@ -17,7 +17,30 @@ namespace UniversityRegistrationCore.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
             // Fluent API configurations can go here
+            modelBuilder.Entity<Department>(entity =>
+            {
+                entity.HasKey(d => d.DepartmentId);
+                entity.Property(d => d.DepartmentId).ValueGeneratedOnAdd();
+                // Additional configurations
+            });
+
+            modelBuilder.Entity<Subject>(entity =>
+            {
+                entity.HasKey(d => d.SubjectId);
+                entity.Property(d => d.SubjectId).ValueGeneratedOnAdd();
+                // Additional configurations
+            });
+
+            modelBuilder.Entity<Professor>(entity =>
+            {
+                entity.HasKey(d => d.ProfessorId);
+                entity.Property(d => d.ProfessorId).ValueGeneratedOnAdd();
+                // Additional configurations
+            });
+
+
         }
     }
 }

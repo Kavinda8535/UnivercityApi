@@ -33,6 +33,11 @@ namespace UniversityRegistrationCore.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateDepartment([FromBody] DepartmentDTO departmentDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var department = _mapper.Map<Department>(departmentDTO);
             await _unitOfWork.Departments.AddAsync(department);
             await _unitOfWork.CompleteAsync();
