@@ -58,3 +58,5 @@ K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\obj\Debug\net6
 K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\obj\Debug\net6.0\UniversityRegistrationCore.pdb
 K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\obj\Debug\net6.0\UniversityRegistrationCore.genruntimeconfig.cache
 K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\obj\Debug\net6.0\ref\UniversityRegistrationCore.dll
+K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\bin\Debug\net6.0\AutoMapper.dll
+K:\Kavi stuff\My Work\Uni Registration\UniversityRegistrationCore\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
