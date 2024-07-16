@@ -13,8 +13,9 @@ namespace UniversityRegistrationCore.Models
         public int DepartmentId { get; set; }
         // Navigation property
         public Department Department { get; set; }
-        public int ProfessorId { get; set; }
+        //public int ProfessorId { get; set; }
         // Navigation property
-        public Professor Professor { get; set; }
+        //public Professor Professor { get; set; }
+        public IList<Professor>? Professors { get; set; }
     }
 }

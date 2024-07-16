@@ -9,7 +9,8 @@ namespace UniversityRegistrationCore.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProfessorId { get; set; }
         public string Name { get; set; }
+        public int SubjectId { get; set; }
         // Navigation property
-        public List<Subject> Subjects { get; set; }
+        public Subject? Subjects { get; set; }
     }
 }

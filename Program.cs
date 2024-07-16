@@ -27,12 +27,25 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Seed the database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<UniversityDbContext>();
+    DbInitializer.Initialize(context);
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+else
+{
+    //app.UseExceptionHandler("/Home/Error"); // Exception page is for MVC project. Since this is a API we need a Custom Middleware for Error Handling...
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();

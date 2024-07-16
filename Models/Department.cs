@@ -10,6 +10,6 @@ namespace UniversityRegistrationCore.Models
         public int DepartmentId { get; set; }
         public string? Name { get; set; }
         // Navigation property
-        public List<Subject>? Subjects { get; set; }
+        public IList<Subject>? Subjects { get; set; }
     }
 }
