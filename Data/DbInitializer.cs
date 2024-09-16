@@ -19,6 +19,7 @@ namespace UniversityRegistrationCore.Data
 
             //TODO - Professors has no department and no subjects. Fix it.
             //Make a custome middleware to Exception Error handling...
+            // Check all data created or not. If partiallly  update data make sure to updte all.
 
             // Seed Departments
             var departments = new Department[]

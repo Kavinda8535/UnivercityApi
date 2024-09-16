@@ -10,6 +10,7 @@ namespace UniversityRegistrationCore.Repositories
         public IDepartmentRepository Departments { get; private set; }
         public ISubjectRepository Subjects { get; private set; }
         public IProfessorRepository Professors { get; private set; }
+        public IStudentRepository Students { get; private set; }
 
         public UnitOfWork(UniversityDbContext context)
         {
@@ -17,6 +18,7 @@ namespace UniversityRegistrationCore.Repositories
             Departments = new DepartmentRepository(_context);
             Subjects = new SubjectRepository(_context);
             Professors = new ProfessorRepository(_context);
+            Students = new StudentRepository(_context);
         }
 
         public async Task<int> CompleteAsync()

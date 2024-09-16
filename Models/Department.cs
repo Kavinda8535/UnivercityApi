@@ -11,5 +11,8 @@ namespace UniversityRegistrationCore.Models
         public string? Name { get; set; }
         // Navigation property
         public IList<Subject>? Subjects { get; set; }
+
+        //public ICollection<Course> Courses { get; set; }
+        public ICollection<Student> Students { get; set; }
     }
 }

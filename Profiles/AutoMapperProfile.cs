@@ -17,6 +17,7 @@ namespace UniversityRegistrationCore.Profiles
             // Add additional mappings as needed
             CreateMap<Subject, SubjectDTO>().ReverseMap();
             CreateMap<Professor, ProfessorDTO>().ReverseMap();
+            CreateMap<Student, StudentDTO>().ReverseMap();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace UniversityRegistrationCore.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Professor> Professors { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +38,13 @@ namespace UniversityRegistrationCore.Data
             {
                 entity.HasKey(d => d.ProfessorId);
                 entity.Property(d => d.ProfessorId).ValueGeneratedOnAdd();
+                // Additional configurations
+            });
+
+            modelBuilder.Entity<Student>(entity =>
+            {
+                entity.HasKey(d => d.StudentId);
+                entity.Property(d => d.StudentId).ValueGeneratedOnAdd();
                 // Additional configurations
             });
 
